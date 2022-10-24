@@ -133,7 +133,7 @@ func (d WordRepositoryDb) Update(word Word) (Word, error) {
 	return word, nil
 }
 func NewWordRepositoryDb() WordRepositoryDb {
-	db, err := sql.Open("mysql", "--:--@tcp(localhost:3306)/word_game")
+	db, err := sql.Open("mysql", "root:root@tcp(localhost:3306)/word_game")
 	if err != nil {
 		panic(err.Error())
 	}
